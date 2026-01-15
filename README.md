@@ -1,20 +1,49 @@
 # Heart Disease Risk Analytics
 
-## Project Overview
-End-to-end healthcare analytics project using PostgreSQL and Power BI.
+An end-to-end healthcare analytics project using **PostgreSQL** and **Power BI** to analyze heart disease risk factors.
 
-## Tools
-- PostgreSQL
-- Power BI Desktop
-- CSV Healthcare Dataset
+---
 
-## Goals
-- Analyze heart disease risk factors
-- Build SQL views for BI dashboards
-- Communicate healthcare insights visually
+## Project Objective
+The goal of this project is to simulate how healthcare analytics teams transform raw patient data into actionable clinical insights using SQL and BI tools.
 
-## Insights
-- Overall disease rate: 51.3%
-- Total patients: 1,025
+---
+
+## Tech Stack
+- PostgreSQL – Data storage & SQL analytics
+- Power BI – Dashboard & visualization
+- CSV Healthcare Dataset – Raw patient data
+
+---
+
+## Dataset
+`data/heart.csv` contains patient-level information including:
+- Age
+- Gender
+- Chest Pain Type
+- Cholesterol
+- Disease outcome indicator
+
+---
+
+## Key Insights
+- Overall disease prevalence is **51.3%**
+- Total patients analyzed: **1,025**
 - Disease risk increases with age
-- Chest pain type strongly correlates with outcomes
+- Typical Angina has the highest disease rate
+- High cholesterol is strongly associated with positive disease outcomes
+
+---
+
+## Dashboard Preview
+See the Power BI export here:  
+`images/dashboard.pdf`
+
+---
+
+## Project Motivation
+I built this project to strengthen my skills in:
+- SQL view design
+- Healthcare analytics
+- BI dashboard storytelling
+- Translating raw data into executive-ready insights
