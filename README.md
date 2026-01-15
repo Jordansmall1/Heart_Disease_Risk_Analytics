@@ -116,13 +116,3 @@ In **Power BI Desktop**:
   <img src="images/icons/icon_postgresql.png" width="90" />
   <img src="images/icons/icon_powerbi.png" width="140" />
 </p>
-
----
-
-## Notes for interview / portfolio
-
-If you’re explaining this project quickly:
-
-- “I used SQL views as a semantic layer, so Power BI stays clean.”
-- “Disease rate is simply `AVG(target)` because it’s a 0/1 indicator.”
-- “The dashboard breaks risk down by age, gender, and chest pain type, plus a cholesterol risk distribution.”
