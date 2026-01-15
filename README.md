@@ -65,7 +65,7 @@ In **Power BI Desktop**:
 
 ---
 
-## Key SQL logic (high level)
+## Key SQL logic 
 
 - **Disease rate** is computed as:
   - `AVG(target)` since `target` is 0/1
@@ -82,6 +82,19 @@ In **Power BI Desktop**:
   - Normal < 200
   - Borderline 200–239
   - High ≥ 240
+ 
+  - ## SQL Example – Cholesterol Risk
+
+```sql
+SELECT
+    CASE
+        WHEN chol >= 240 THEN 'High (240+)'
+        WHEN chol BETWEEN 200 AND 239 THEN 'Borderline (200–239)'
+        ELSE 'Normal (<200)'
+    END AS chol_risk
+FROM public.heart_patient_data;
+```
+
 
 ---
 
