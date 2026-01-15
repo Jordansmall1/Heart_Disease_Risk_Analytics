@@ -116,3 +116,13 @@ In **Power BI Desktop**:
   <img src="images/icons/icon_postgresql.png" width="90" />
   <img src="images/icons/icon_powerbi.png" width="140" />
 </p>
+
+SQL Example – Cholesterol Risk
+
+SELECT
+    CASE
+        WHEN chol >= 240 THEN 'High (240+)'
+        WHEN chol BETWEEN 200 AND 239 THEN 'Borderline (200–239)'
+        ELSE 'Normal (<200)'
+    END AS chol_risk
+FROM public.heart_patient_data;
