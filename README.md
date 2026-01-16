@@ -4,6 +4,36 @@ A compact end‑to‑end analytics project that takes a heart disease dataset (`
 
 ![Dashboard](images/dashboard.png)
 
+## Key SQL logic 
+
+- **Disease rate** is computed as:
+  - `AVG(target)` since `target` is 0/1
+- **Gender labels**:
+  - `sex = 1 → Male`, `sex = 0 → Female`
+- **Age groups**:
+  - Under 40, 40s, 50s, 60s, 70+
+- **Chest pain mapping** (`cp`):
+  - 0 Typical Angina
+  - 1 Atypical Angina
+  - 2 Non-anginal Pain
+  - 3 Asymptomatic
+- **Cholesterol risk buckets** (mg/dL):
+  - Normal < 200
+  - Borderline 200–239
+  - High ≥ 240
+ 
+  - ## SQL Example – Cholesterol Risk
+
+```sql
+SELECT
+    CASE
+        WHEN chol >= 240 THEN 'High (240+)'
+        WHEN chol BETWEEN 200 AND 239 THEN 'Borderline (200–239)'
+        ELSE 'Normal (<200)'
+    END AS chol_risk
+FROM public.heart_patient_data;
+```
+
 ---
 
 ## Project goals
@@ -64,40 +94,6 @@ In **Power BI Desktop**:
 - Build visuals directly on the views (keeps Power BI modeling simple and clean)
 
 ---
-
-## Key SQL logic 
-
-- **Disease rate** is computed as:
-  - `AVG(target)` since `target` is 0/1
-- **Gender labels**:
-  - `sex = 1 → Male`, `sex = 0 → Female`
-- **Age groups**:
-  - Under 40, 40s, 50s, 60s, 70+
-- **Chest pain mapping** (`cp`):
-  - 0 Typical Angina
-  - 1 Atypical Angina
-  - 2 Non-anginal Pain
-  - 3 Asymptomatic
-- **Cholesterol risk buckets** (mg/dL):
-  - Normal < 200
-  - Borderline 200–239
-  - High ≥ 240
- 
-  - ## SQL Example – Cholesterol Risk
-
-```sql
-SELECT
-    CASE
-        WHEN chol >= 240 THEN 'High (240+)'
-        WHEN chol BETWEEN 200 AND 239 THEN 'Borderline (200–239)'
-        ELSE 'Normal (<200)'
-    END AS chol_risk
-FROM public.heart_patient_data;
-```
-
-
----
-
 ## Repo structure
 
 ```
