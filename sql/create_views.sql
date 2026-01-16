@@ -4,7 +4,6 @@
 -- target: 1 = heart disease, 0 = no heart disease
 
 -- 1) Create table
-DROP TABLE IF EXISTS public.heart_patient_data;
 CREATE TABLE public.heart_patient_data (
   age        INT,
   sex        INT,
@@ -31,7 +30,6 @@ CREATE TABLE public.heart_patient_data (
 -- Chol risk buckets (mg/dL): Normal <200, Borderline 200-239, High >=240
 
 -- 3) KPI view
-DROP VIEW IF EXISTS public.v_overall_kpi;
 CREATE VIEW public.v_overall_kpi AS
 SELECT
   COUNT(*)::int                                AS total_patients,
@@ -41,7 +39,6 @@ SELECT
 FROM public.heart_patient_data;
 
 -- 4) Disease rate by age group
-DROP VIEW IF EXISTS public.v_age_risk;
 CREATE VIEW public.v_age_risk AS
 WITH base AS (
   SELECT
@@ -71,7 +68,6 @@ ORDER BY
   END;
 
 -- 5) Disease rate by gender
-DROP VIEW IF EXISTS public.v_gender_risk;
 CREATE VIEW public.v_gender_risk AS
 WITH base AS (
   SELECT
@@ -88,7 +84,6 @@ GROUP BY gender
 ORDER BY gender;
 
 -- 6) Chest pain distribution + disease rate
-DROP VIEW IF EXISTS public.v_cp_risk;
 CREATE VIEW public.v_cp_risk AS
 WITH base AS (
   SELECT
@@ -111,7 +106,6 @@ GROUP BY chest_pain_type
 ORDER BY patients DESC;
 
 -- 7) Cholesterol risk buckets (distribution)
-DROP VIEW IF EXISTS public.v_chol_risk;
 CREATE VIEW public.v_chol_risk AS
 WITH base AS (
   SELECT
