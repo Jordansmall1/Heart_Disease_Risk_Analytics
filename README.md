@@ -40,7 +40,6 @@ FROM public.heart_patient_data;
 
 - Practice a realistic **BI workflow**: raw CSV → relational database → SQL views → Power BI report
 - Build a clean set of **business-ready metrics** (disease rate, risk breakdowns, distributions)
-- Create a dashboard that’s **presentation-ready** and easy to explain in an interview
 
 ---
 
@@ -89,7 +88,7 @@ That script:
 
 ### 2) Connect Power BI to Postgres
 In **Power BI Desktop**:
-- **Get Data → PostgreSQL database** (or ODBC if you used a DSN)
+- **Get Data → PostgreSQL database** (ODBC)
 - Import the SQL **views** above
 - Build visuals directly on the views (keeps Power BI modeling simple and clean)
 
