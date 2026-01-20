@@ -6,24 +6,6 @@ Data from [https://www.kaggle.com/datasets/johnsmith88/heart-disease-dataset/dat
 
 ![Dashboard](images/dashboard.png)
 
-## Key SQL logic 
-
-- **Disease rate** is computed as:
-  - `AVG(target)` since `target` is 0/1
-- **Gender labels**:
-  - `sex = 1 → Male`, `sex = 0 → Female`
-- **Age groups**:
-  - Under 40, 40s, 50s, 60s, 70+
-- **Chest pain mapping** (`cp`):
-  - 0 Typical Angina
-  - 1 Atypical Angina
-  - 2 Non-anginal Pain
-  - 3 Asymptomatic
-- **Cholesterol risk buckets** (mg/dL):
-  - Normal < 200
-  - Borderline 200–239
-  - High ≥ 240
- 
   - ## SQL Example – Cholesterol Risk
 
 ```sql
@@ -47,6 +29,25 @@ FROM public.heart_patient_data
 GROUP BY gender;
 ```
 ---
+
+## Key SQL logic 
+
+- **Disease rate** is computed as:
+  - `AVG(target)` since `target` is 0/1
+- **Gender labels**:
+  - `sex = 1 → Male`, `sex = 0 → Female`
+- **Age groups**:
+  - Under 40, 40s, 50s, 60s, 70+
+- **Chest pain mapping** (`cp`):
+  - 0 Typical Angina
+  - 1 Atypical Angina
+  - 2 Non-anginal Pain
+  - 3 Asymptomatic
+- **Cholesterol risk buckets** (mg/dL):
+  - Normal < 200
+  - Borderline 200–239
+  - High ≥ 240
+ 
 
 ## Project goals
 
