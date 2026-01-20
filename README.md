@@ -35,7 +35,7 @@ SELECT
     END AS chol_risk
 FROM public.heart_patient_data;
 ```
- – Age Risk
+  - ## SQL Example – Age Risk
 
 ```sql
 CREATE VIEW public.v_gender_risk AS
