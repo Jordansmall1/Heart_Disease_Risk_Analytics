@@ -35,7 +35,17 @@ SELECT
     END AS chol_risk
 FROM public.heart_patient_data;
 ```
+  - ## SQL Example – Age Risk
 
+```sql
+CREATE VIEW public.v_gender_risk AS
+SELECT
+  CASE WHEN sex = 1 THEN 'Male' ELSE 'Female' END AS gender,
+  COUNT(*)    AS patients,
+  AVG(target) AS disease_rate
+FROM public.heart_patient_data
+GROUP BY gender;
+```
 ---
 
 ## Project goals
