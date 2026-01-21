@@ -58,3 +58,19 @@ SELECT
     WHEN 2 THEN 'Non-anginal Pain'
     WHEN 3 THEN 'Asymptomatic'
   END AS chest_pain_type,
+
+--Vessel Block Risk
+CREATE VIEW public.v_vessel_risk AS
+SELECT 
+    CASE 
+        WHEN ca = 0 THEN '0 Vessels'
+        WHEN ca = 1 THEN '1 Vessel'
+        ELSE '2+ Vessels' 
+    END AS vessel_group,
+    COUNT(*) AS patient_count,
+    -- The logic flip: (1 - 0) = 1 for disease
+    ROUND((1 - AVG(target)) * 100, 1) AS disease_rate_pct
+FROM public.heart_patient_data
+GROUP BY 1
+ORDER BY 1;
+
