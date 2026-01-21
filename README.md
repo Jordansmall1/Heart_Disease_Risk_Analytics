@@ -3,6 +3,9 @@
 A compact end‑to‑end analytics project that takes a heart disease dataset (`heart.csv`), loads it into **PostgreSQL**, builds reusable **SQL views**, and visualizes key risk insights in **Power BI**.
 
 Data from [https://www.kaggle.com/datasets/johnsmith88/heart-disease-dataset/data](https://www.kaggle.com/datasets/johnsmith88/heart-disease-dataset/data)
+ 
+  - ## Data cleanign and aduit
+  - checked the 1,025 records for duplicates and null values
 
 ![Dashboard](images/dashboard.png)
 
