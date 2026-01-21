@@ -74,3 +74,15 @@ FROM public.heart_patient_data
 GROUP BY 1
 ORDER BY 1;
 
+--Stress Factor
+CREATE VIEW public.v_stress_levels AS
+SELECT 
+    CASE 
+        WHEN exang = 1 AND oldpeak >= 2.0 THEN 'High Stress Risk'
+        WHEN exang = 0 AND oldpeak < 1.0 THEN 'Low Stress Risk'
+        ELSE 'Moderate Stress Risk'
+    END AS stress_category,
+    COUNT(*) AS patient_count,
+    ROUND((1 - AVG(target)) * 100, 1) AS disease_probability
+FROM public.heart_patient_data
+GROUP BY 1
