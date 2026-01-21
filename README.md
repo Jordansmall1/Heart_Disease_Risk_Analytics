@@ -4,8 +4,9 @@ A compact end‑to‑end analytics project that takes a heart disease dataset (`
 
 Data from [https://www.kaggle.com/datasets/johnsmith88/heart-disease-dataset/data](https://www.kaggle.com/datasets/johnsmith88/heart-disease-dataset/data)
  
-  - ## Data cleanign and aduit
+  - ## Data clean and aduit
   - checked the 1,025 records for duplicates and null values
+
 ![Dashboard](images/dashboard.png)
 
   - ## SQL Example – Cholesterol Risk
