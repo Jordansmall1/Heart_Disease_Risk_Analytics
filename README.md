@@ -7,7 +7,7 @@ Data from [https://www.kaggle.com/datasets/johnsmith88/heart-disease-dataset/dat
   - ## Data clean and aduit
   - checked the 1,025 records for duplicates and null values
 
-![Dashboard](images/dashboard.png)
+![Dashboard](images/dashboard.png) 
 
   - ## SQL Example – Cholesterol Risk
 
