@@ -51,7 +51,39 @@ GROUP BY gender;
   - Borderline 200–239
   - High ≥ 240
  
+## 📊 Dataset Overview
 
+This project analyzes **1,025 patient records** from the UCI Heart Disease dataset to identify key risk factors and predictors of cardiovascular disease.
+
+### Data Dictionary
+
+The dataset contains **14 clinical attributes** per patient:
+
+| Column | Feature | Description | Values/Units |
+|--------|---------|-------------|--------------|
+| `age` | Age | Patient age in years | Numeric |
+| `sex` | Sex | Biological sex | 0 = Female, 1 = Male |
+| `cp` | Chest Pain Type | Type of chest pain experienced | 0 = Typical Angina<br>1 = Atypical Angina<br>2 = Non-anginal Pain<br>3 = Asymptomatic |
+| `trestbps` | Resting Blood Pressure | Blood pressure at rest | mm Hg |
+| `chol` | Serum Cholesterol | Cholesterol level | mg/dl |
+| `fbs` | Fasting Blood Sugar | Fasting blood sugar > 120 mg/dl | 0 = False, 1 = True |
+| `restecg` | Resting ECG Results | Electrocardiographic results at rest | 0 = Normal<br>1 = ST-T Wave Abnormality<br>2 = Left Ventricular Hypertrophy |
+| `thalach` | Max Heart Rate | Maximum heart rate achieved | bpm |
+| `exang` | Exercise Induced Angina | Angina induced by exercise | 0 = No, 1 = Yes |
+| `oldpeak` | ST Depression | ST depression induced by exercise relative to rest | Numeric |
+| `slope` | ST Slope | Slope of peak exercise ST segment | 0 = Upsloping<br>1 = Flat<br>2 = Downsloping |
+| `ca` | Major Vessels | Number of major vessels colored by fluoroscopy | 0-3 |
+| `thal` | Thalassemia | Blood disorder status | 0 = Normal<br>1 = Fixed Defect<br>2 = Reversible Defect |
+| `target` | **Target Variable** | **Heart disease diagnosis** | **0 = No Disease, 1 = Disease** |
+
+### Key Statistics
+
+- **Total Patients:** 1,025
+- **Disease Prevalence:** 51.3%
+- **Male Patients:** 713 (69.6%)
+- **Female Patients:** 312 (30.4%)
+- **Average Age:** 54.4 years
+- **Average Cholesterol:** 246 mg/dl
 ## Project goals
 
 - Practice a realistic **BI workflow**: raw CSV → relational database → SQL views → Power BI report
