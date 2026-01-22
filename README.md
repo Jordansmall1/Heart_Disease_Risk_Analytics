@@ -7,7 +7,13 @@ Data from [https://www.kaggle.com/datasets/johnsmith88/heart-disease-dataset/dat
   - ## Data clean and aduit
   - checked the 1,025 records for duplicates and null values
 
-![Dashboard](images/dashboard.png) 
+## Dashboard Overview
+
+### Page 1: Overview & Demographics
+![Dashboard Page 1](images/J.S%20heart%20anlytics-1.png)
+
+### Page 2: Clinical Insights & Analysis
+![Dashboard Page 2](images/J.S%20heart%20anlytics-2.png) 
 
   - ## SQL Example – Cholesterol Risk
 
