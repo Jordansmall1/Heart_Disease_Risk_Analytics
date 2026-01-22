@@ -68,7 +68,6 @@ SELECT
         ELSE '2+ Vessels' 
     END AS vessel_group,
     COUNT(*) AS patient_count,
-    -- The logic flip: (1 - 0) = 1 for disease
     ROUND((1 - AVG(target)) * 100, 1) AS disease_rate_pct
 FROM public.heart_patient_data
 GROUP BY 1
