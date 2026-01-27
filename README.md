@@ -45,20 +45,20 @@ GROUP BY gender;
 
 ### The 3 Critical Risk Factors
 
-#### 1. 💊 The Best Predictor: Chest Pain Type
+#### 1. The Best Predictor: Chest Pain Type
 Chest pain is the first sign, but it's specific. Patients with **"Atypical" pain** are significantly more likely to have a heart condition than those with standard chest pain.
 - **Atypical Angina:** 80.2% disease probability
 - **Non-anginal Pain:** 77.1% disease probability
 - **Asymptomatic:** 66.2% disease probability
 - **Typical Angina:** 24.5% disease probability
 
-#### 2. 🩸 The Physical Cause: Arterial Blockages
+#### 2. The Physical Cause: Arterial Blockages
 Blockages in major vessels are the strongest physical evidence. The risk of a heart disease diagnosis **increases the moment even one narrowed vessel is detected** during a scan.
 - **2+ Vessels blocked:** 79.6% disease probability
 - **1 Vessel blocked:** 70.8% disease probability
 - **0 Vessels blocked:** 28.2% disease probability
 
-#### 3. 💪 The Stress Factor: Exercise Tolerance
+#### 3. The Stress Factor: Exercise Tolerance
 A patient's ability to handle exercise is a major "tell." Those who couldn't reach a high maximum heart rate or had poor recovery (ST depression) were consistently in the high-risk group.
 - **High Stress Risk:** Elevated disease probability
 - **Moderate Stress Risk:** Medium disease probability
